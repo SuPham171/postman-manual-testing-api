@@ -121,22 +121,6 @@ Kết quả mong đợi:
 - Response body có trường `success: true`
 - Dữ liệu trả về là danh sách sinh viên.
 
-Ví dụ response:
-
-```json
-{
-  "success": true,
-  "count": 2,
-  "data": [
-    {
-      "id": 1,
-      "name": "Pham Van Su",
-      "email": "23010523@st.phenikaa-uni.edu.vn",
-      "major": "Artificial Intelligence and Data Science"
-    }
-  ]
-}
-```
 
 ![GET students](docs/screenshots/03-get-students.png)
 
@@ -173,8 +157,8 @@ Body gửi lên:
 
 ```json
 {
-  "name": "Tran Thi B",
-  "email": "tranthib@example.com",
+  "name": "Giap Van Trang",
+  "email": "23010382@st.phenikaa-ynu.edu.vn",
   "major": "Software Engineering"
 }
 ```
@@ -198,8 +182,8 @@ Kết quả mong đợi:
 
 ```json
 {
-  "name": "Pham Van Su Updated",
-  "major": "AI and Data Science"
+  "name": "Pham Van Su",
+  "major": "Computer Science"
 }
 ```
 
@@ -248,15 +232,6 @@ Kết quả mong đợi:
 - Method: `POST`
 - URL: `http://localhost:3000/api/students`
 - Header: `Content-Type: application/json`
-- Body:
-
-```json
-{
-  "name": "A",
-  "email": "email-sai",
-  "major": ""
-}
-```
 
 Kết quả mong đợi:
 
