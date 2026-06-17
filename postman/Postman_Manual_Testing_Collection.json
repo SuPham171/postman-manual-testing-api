@@ -1,0 +1,138 @@
+{
+  "info": {
+    "name": "Student API - Kiem thu thu cong bang Postman",
+    "description": "Collection gom cac request co ban de kiem thu API bang Postman: GET, POST, PUT, DELETE.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 - Kiem tra server",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": ["{{baseUrl}}"],
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "02 - Lay danh sach sinh vien",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/students",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "students"]
+        }
+      }
+    },
+    {
+      "name": "03 - Lay sinh vien theo id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/students/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "students", "1"]
+        }
+      }
+    },
+    {
+      "name": "04 - Them sinh vien moi",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Tran Thi B\",\n  \"email\": \"tranthib@example.com\",\n  \"major\": \"Software Engineering\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/students",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "students"]
+        }
+      }
+    },
+    {
+      "name": "05 - Cap nhat sinh vien",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Pham Van Su Updated\",\n  \"major\": \"AI and Data Science\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/students/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "students", "1"]
+        }
+      }
+    },
+    {
+      "name": "06 - Xoa sinh vien",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/students/2",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "students", "2"]
+        }
+      }
+    },
+    {
+      "name": "07 - Test loi 404",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/students/999",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "students", "999"]
+        }
+      }
+    },
+    {
+      "name": "08 - Test loi body khong hop le",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"A\",\n  \"email\": \"email-sai\",\n  \"major\": \"\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/students",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "students"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

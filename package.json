@@ -1,0 +1,18 @@
+{
+  "name": "postman-manual-testing-api",
+  "version": "1.0.0",
+  "description": "Demo REST API để kiểm thử thủ công bằng Postman",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": ["postman", "api", "testing", "express"],
+  "author": "Pham Van Su - 23010523",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {}
+}
